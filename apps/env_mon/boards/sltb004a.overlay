@@ -1,0 +1,17 @@
+&rtcc0 {
+    status = "okay";
+	compatible = "silabs,gecko-rtcc";
+};
+
+/{  
+    aliases {
+        rtc = &rtcc0;
+        gassensor = &ccs811;
+    };
+};
+
+&i2c1 {
+    ccs811: ccs811@5a {
+		status = "okay";
+	};
+};

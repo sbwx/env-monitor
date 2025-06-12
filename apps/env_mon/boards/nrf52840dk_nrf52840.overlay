@@ -1,0 +1,21 @@
+&rtc0 {
+    status = "okay";
+	compatible = "nordic,nrf-rtc";
+
+};
+
+/{
+    leds {
+        gpio_clk: clk {
+	        gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;
+        };
+
+        gpio_data: data {
+	        gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+        };
+    };
+    
+    aliases {
+        rtc = &rtc0;
+    };
+};
